@@ -2,7 +2,7 @@ Deux versions ont été dev
 Participant : Jonathan ROCHA, Stephanne KOCH, Boris PRINCE
 
 **Projet gestionnaire de tache**
-
+Gestion.py
 Consigne :
 
 Projet : Gestion avancée de tâches avec interface graphique et stockage de données
