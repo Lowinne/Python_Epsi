@@ -15,15 +15,12 @@ def on_click(button_text):
     else:
         entry.insert(tk.END, button_text)
 
-# Create the main window
 root = tk.Tk()
 root.title("Simple Calculator")
 
-# Entry widget to display the input and results
 entry = tk.Entry(root, width=20, font=("Helvetica", 16), justify="right")
 entry.grid(row=0, column=0, columnspan=4)
 
-# Define the calculator buttons
 buttons = [
     "7", "8", "9", "/",
     "4", "5", "6", "*",
@@ -32,7 +29,6 @@ buttons = [
     "C"
 ]
 
-# Create and place the calculator buttons
 row_val = 1
 col_val = 0
 
@@ -44,5 +40,4 @@ for button_text in buttons:
         col_val = 0
         row_val += 1
 
-# Run the Tkinter event loop
 root.mainloop()

@@ -12,3 +12,4 @@ for i in range(3):
 personne = {"Nom":nom,"Prenom":prénom,"age":age,"taille":taille,"fruits":tab}
 print("Voila ce que j'ai retenue :")
 print(personne)
+

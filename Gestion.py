@@ -47,7 +47,7 @@ class GestionnaireTache:
     def add_task(self):
         description = self.description_entry.get()
         date_str = self.date_entry.get()
-
+        #test reg ex
         if description and date_str:
             try:
                 due_date = datetime.strptime(date_str, "%Y-%m-%d").strftime("%Y-%m-%d")
@@ -70,6 +70,7 @@ class GestionnaireTache:
 
         # Reintégration des taches dans le tableau
         for i, task in enumerate(self.tasks, start=1):
+            #tuple
             values = (i, task["description"], task["due_date"], task.get("status", "Not Done"))
             iid = self.tree.insert("", "end", values=values)
             # Changer la couleur en fonction du statut
@@ -99,7 +100,7 @@ class GestionnaireTache:
         file_path = tk.filedialog.asksaveasfilename(defaultextension=".json", filetypes=[("JSON files", "*.json"), ("All files", "*.*")])
         if file_path:
             with open(file_path, "w") as file:
-                json.dump(self.tasks, file, indent=2)
+                json.dump(self.contacts, file, indent=2)
             messagebox.showinfo("Export Successful", f"Tasks exported to {file_path}")
 
 if __name__ == "__main__":
