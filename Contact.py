@@ -133,7 +133,7 @@ class Contact:
         file_path = tk.filedialog.askopenfilename(defaultextension=".json", filetypes=[("JSON files", "*.json"), ("All files", "*.*")])
         try:
             with open(file_path, "r") as fichier:
-                self.contacts = json.load(fichier)  #Charger la liste des listes enregistrées
+                self.contacts = json.load(fichier)  #Deserialization du json
         except FileNotFoundError:
             self.contacts = []  #Si le fichier n'existe pas, initialiser une liste vide
         self.update_treeview()
